@@ -1,19 +1,14 @@
-#include "Arduino.h"
+#include "BCDTo7Seg.h"
 
-unsigned long time;
+BCDTo7Seg dsp;
 
-void setup()
-{
-    //D0~D7 is Output
-    DDRD=B11111111;
-    
-    Serial.begin(9600);
+void setup() {
+  dsp.attach(2,3,4,5); // pins
 }
 
-void loop()
-{
-    //time=millis();
-    PORTD=millis()/1000;
-    Serial.println(millis()/1000);
+void loop() {
+  for (int i = 0; i < 10; i++) {
+    dsp.write(i);
     delay(1000);
+  }
 }
