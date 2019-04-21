@@ -2,5 +2,5 @@
     "programmer": "AVR ISP",
     "board": "arduino:avr:uno",
     "port": "COM5",
-    "sketch": "exsamples\\7-Segment.ino"
+    "sketch": "exsamples\\BCDTo7Seg.ino"
 }
