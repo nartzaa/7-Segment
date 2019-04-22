@@ -16,11 +16,18 @@ void setup() {
 
 void loop() {
   for(int i=0;i<10;i++){
+    digitalWrite(Num2,HIGH);
     dsp.write(i);
-    delay(1000);    
+    digitalWrite(Num2,LOW);
+    delay(500);    
   }
   j++;
-  dsp.write(j);
   digitalWrite(Num1,HIGH);
+  dsp.write(j);
   digitalWrite(Num1,LOW);
+  if (j>9)
+  {
+    j=0;
+  }
+  
 }
